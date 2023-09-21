@@ -63,3 +63,62 @@ int main() {
 
     return 0; // Return 0 to indicate successful program execution
 }
+
+
+// Define a class called "Person"
+class Person {
+public:
+    // Constructor to initialize object properties
+    Person(std::string name, int age) {
+        this->name = name;
+        this->age = age;
+    }
+
+    // Member function to display person's information
+    void displayInfo() {
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "Age: " << age << std::endl;
+    }
+
+private:
+    std::string name; // Private member variable for name
+    int age;         // Private member variable for age
+};
+
+#include <iostream>
+#include <string>
+
+// Define a class called "Person"
+class Person {
+public:
+    // Constructor to initialize object properties
+    Person(std::string name, int age) {
+        this->name = name;
+        this->age = age;
+    }
+
+    // Member function to display person's information
+    void displayInfo() {
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "Age: " << age << std::endl;
+    }
+
+private:
+    std::string name; // Private member variable for name
+    int age;         // Private member variable for age
+};
+
+int main() {
+    // Create two Person objects
+    Person person1("Alice", 25);
+    Person person2("Bob", 30);
+
+    // Call the displayInfo() member function for each person
+    std::cout << "Person 1:" << std::endl;
+    person1.displayInfo();
+    
+    std::cout << "\nPerson 2:" << std::endl;
+    person2.displayInfo();
+
+    return 0;
+}
