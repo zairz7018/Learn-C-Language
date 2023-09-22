@@ -121,4 +121,28 @@ int main() {
     person2.displayInfo();
 
     return 0;
+
+    
+#include <math.h>
+
+int main() {
+    // Exemple 1 : Calcul de la racine carrée
+    double nombre = 16.0;
+    double racine_carree = sqrt(nombre);
+    printf("La racine carrée de %.2lf est %.2lf\n", nombre, racine_carree);
+
+    // Exemple 2 : Calcul de la valeur absolue
+    int nombre_negatif = -7;
+    int valeur_absolue = abs(nombre_negatif);
+    printf("La valeur absolue de %d est %d\n", nombre_negatif, valeur_absolue);
+
+    // Exemple 3 : Utilisation de la fonction trigonométrique sin
+    double angle_degrees = 45.0;
+    double angle_radians = angle_degrees * M_PI / 180.0; // Conversion en radians
+    double sin_value = sin(angle_radians);
+    printf("Le sinus de %.2lf degrés est %.2lf\n", angle_degrees, sin_value);
+
+    return 0;
+}
+
 }
