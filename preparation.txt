@@ -1764,4 +1764,20 @@ En résumé, l'héritage permet de gérer le partage des données et des comport
 User
  reponse direct par oui et non et pourquoi :une reference est une adresse d une autre variable ?
 ChatGPT
+
 Oui, une référence est en effet une adresse d'une autre variable. Une référence est une notion couramment utilisée en programmation pour créer un alias ou un autre nom pour une variable existante. Plutôt que de stocker la valeur réelle de la variable, une référence pointe vers l'emplacement mémoire où cette valeur est stockée. En d'autres termes, une référence est une manière de faire référence à une variable en utilisant une autre variable qui contient l'adresse mémoire de la première variable. Cela permet de manipuler la variable d'origine à travers sa référence, tout en évitant de créer une copie distincte de la variable. C'est un concept courant en langages de programmation comme C++ où les références sont utilisées pour des raisons de performance et de gestion
+
+
+
+
+#include <stdio.h>
+
+int somme(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int resultat = somme(5, 3);
+    printf("La somme est : %d\n", resultat);
+    return 0;
+}
