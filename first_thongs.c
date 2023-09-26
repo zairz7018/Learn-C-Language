@@ -1,38 +1,48 @@
-#include <stdio.h> 
-
-
-int main()
-{
-    printf("hello world \n");
-    return 0 ;
-}
-
-// Exercice : Calcul de la somme des entiers de 1 à N
-
-// Écrivez une fonction en C appelée sommeEntiers qui prend un entier positif N comme argument et renvoie la somme de tous les entiers de 1 à N. Par exemple, si N est égal à 5, la fonction devrait renvoyer 15 (1 + 2 + 3 + 4 + 5).
-
 #include <stdio.h>
 
-int sommeEntiers(int N) {
-    int somme = 0;
-    for (int i = 1; i <= N; i++) {
-        somme += i;
+int add(int a, int b) {
+    return a + b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+float divide(int a, int b) {
+    if (b != 0) {
+        return (float)a / b;
+    } else {
+        printf("Error: Division by zero\n");
+        return 0.0;
     }
-    return somme;
+}
+
+int factorial(int n) {
+    if (n < 0) {
+        printf("Error: Factorial undefined for negative numbers\n");
+        return -1; // Indicate an error
+    } else if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        int result = 1;
+        for (int i = 2; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
 }
 
 int main() {
-    int N;
-    printf("Entrez un entier positif N : ");
-    scanf("%d", &N);
-    
-    if (N < 1) {
-        printf("N doit être un entier positif.\n");
-        return 1; // Code d'erreur
-    }
-
-    int resultat = sommeEntiers(N);
-    printf("La somme des entiers de 1 à %d est : %d\n", N, resultat);
-    
-    return 0; // Fin normale du programme
+    int a = 5, b = 3;
+    printf("Addition: %d\n", add(a, b));
+    printf("Subtraction: %d\n", subtract(a, b));
+    printf("Multiplication: %d\n", multiply(a, b));
+    printf("Division: %.2f\n", divide(a, b));
+    int n = 5;
+    printf("Factorial of %d: %d\n", n, factorial(n));
+    return 0;
 }
